@@ -16,6 +16,19 @@ This dataset contains user behavioral information from a large multi-category on
 #### Languages : 
      Python
      SQL
+#### AWS Services :
+     AWS S3
+     AWS Glue
+     AWS Athena
+     AWS Cloud9
+     Apache Flink
+     Amazon Kinesis
+     Amazon SNS
+     AWS Lambda
+     Amazon CloudWatch
+     QuickSight
+     Apache Zepplin
+     Amazon DynamoDB
 
 
 
