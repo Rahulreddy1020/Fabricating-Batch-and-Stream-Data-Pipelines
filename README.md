@@ -29,6 +29,8 @@ This dataset contains user behavioral information from a large multi-category on
      QuickSight
      Apache Zepplin
      Amazon DynamoDB
+     
+## System Architecture 
   
 ![image](https://user-images.githubusercontent.com/83365184/222992271-4c3f3f06-fb32-4664-9968-b52d5ba93a34.png)
 
