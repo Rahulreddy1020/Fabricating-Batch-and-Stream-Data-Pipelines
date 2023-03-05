@@ -36,9 +36,11 @@ Below is the lucid chart diagram of system architecture. after we downloaded the
 
 later we lauched a cloud 9 in EC2 instance to run boto3 to connect python simulator to AWS services.
 
-Now we had to create a Kinesis streams which could handle our continous streaming data
+Now we had to create a Kinesis streams which could handle our continous streaming data, this will be our stream 1.
 
 the python simulator is created in such a way it connects to s3 bucket to pull the static data which is in CSV and simulates it into a continous stream with partitions based on Category Id, here we will shard the data in Kinesis streams with category id.
+
+The glue service is used now to crawl the data from Stream 1
 
 
   
