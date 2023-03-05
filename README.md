@@ -5,6 +5,7 @@ Ecommerce analytics is the process which involves gathering data from various so
 - unique visitors per day 
 - identifying when users add products to carts but don't buy 
 - top categories per hour/weekday for promotions, and identifying brands that need more marketing. 
+
 On the other hand, the Real-time channel focuses on detecting Distributed Denial of Service (DDoS) and Bot attacks using AWS Lambda, DynamoDB, CloudWatch, and AWS SNS.
      
 ## Dataset Description :
