@@ -31,6 +31,16 @@ This dataset contains user behavioral information from a large multi-category on
      Amazon DynamoDB
      
 ## System Architecture 
+
+Below is the lucid chart diagram of system architecture. after we downloaded the data in CSV format, we have stored this data in s3 bucket which is a data lake service. 
+
+later we lauched a cloud 9 in EC2 instance to run boto3 to connect python simulator to AWS services.
+
+Now we had to create a Kinesis streams which could handle our continous streaming data
+
+the python simulator is created in such a way it connects to s3 bucket to pull the static data which is in CSV and simulates it into a continous stream with partitions based on Category Id, here we will shard the data in Kinesis streams with category id.
+
+
   
 ![image](https://user-images.githubusercontent.com/83365184/222992271-4c3f3f06-fb32-4664-9968-b52d5ba93a34.png)
 
