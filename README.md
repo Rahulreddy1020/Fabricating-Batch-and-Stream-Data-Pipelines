@@ -56,6 +56,8 @@ Amazon S3 (Simple Storage Service) is a cloud-based object storage service provi
 
 S3 stores objects (files) in buckets, which are containers for objects that can be accessed using a unique URL. S3 supports multiple storage classes, including Standard, Standard-Infrequent Access (IA), One Zone-Infrequent Access (One Zone-IA), Intelligent Tiering, Glacier, and Glacier Deep Archive. Each storage class has different features, performance characteristics, and costs, allowing users to choose the appropriate storage class for their specific use case and data access requirements.
 
+![image](https://user-images.githubusercontent.com/83365184/222992656-74222c6d-496b-4e43-8fc7-2114bde0bbee.png)
+
 ## Cloud9 
 
 To run our python script which has been created to mimic the real time data, we will be using cloud9.
@@ -73,6 +75,8 @@ Once your environment is created, you can start writing and running code in the 
 
 Cloud9 in AWS provides a powerful and flexible development environment that can help you streamline your development workflows and accelerate your development process
 
+![image](https://user-images.githubusercontent.com/83365184/222992678-2b29bb90-2c90-4578-92f2-6d0da154ee0f.png)
+
 ## Boto3
 
 Boto3 needs to be installed in cloud9 to connect our python script to aws services.
@@ -85,11 +89,23 @@ Boto3 also supports automatic credential management, allowing you to authenticat
 
 With Boto3, developers can easily build serverless applications using AWS Lambda functions, which can be triggered by events from various AWS services like S3, Kinesis, DynamoDB, and more. Boto3 also supports AWS Step Functions, enabling developers to create and manage state machines that coordinate AWS services.
 
-!
+## Python Script
 
-![image](https://user-images.githubusercontent.com/83365184/222992656-74222c6d-496b-4e43-8fc7-2114bde0bbee.png)
+In this step we are importing essential libraries which are required.
 
-![image](https://user-images.githubusercontent.com/83365184/222992678-2b29bb90-2c90-4578-92f2-6d0da154ee0f.png)
+![image](https://user-images.githubusercontent.com/83365184/226068960-6ff395dc-e416-4bcb-817e-2f3f420128f0.png)
+
+creating AWS settings
+
+![image](https://user-images.githubusercontent.com/83365184/226069049-ea77f808-4984-47ae-9c49-c3c2cc79c725.png)
+
+
+
+! 
+
+
+
+
 
 
 
