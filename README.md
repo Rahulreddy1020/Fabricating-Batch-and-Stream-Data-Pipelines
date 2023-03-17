@@ -89,6 +89,11 @@ Boto3 also supports automatic credential management, allowing you to authenticat
 
 With Boto3, developers can easily build serverless applications using AWS Lambda functions, which can be triggered by events from various AWS services like S3, Kinesis, DynamoDB, and more. Boto3 also supports AWS Step Functions, enabling developers to create and manage state machines that coordinate AWS services.
 
+## Kinesis 
+
+!![image](https://user-images.githubusercontent.com/83365184/226069598-07c0d01c-37d6-495c-a876-be4236271afd.png)
+
+
 ## Python Script
 
 In this step we are importing essential libraries which are required.
@@ -96,6 +101,10 @@ In this step we are importing essential libraries which are required.
 ![image](https://user-images.githubusercontent.com/83365184/226068960-6ff395dc-e416-4bcb-817e-2f3f420128f0.png)
 
 creating AWS settings
+
+1. The first line creates an S3 client object by calling the boto3.client() function with 's3' as the service name and 'us-west-1' as the region name. This client object provides an interface to interact with S3 service in the US West 1 region, such as uploading or downloading files to/from S3 buckets, creating and deleting S3 buckets, and more..
+2. The second line creates an S3 resource object by calling the boto3.resource() function with 's3' as the service name and 'us-west-1' as the region name. This resource object provides a higher-level interface to interact with S3 service in the US West 1 region, such as creating S3 buckets, listing objects in S3 buckets, copying objects from one bucket to another, and more.
+3. The third line creates a Kinesis client object by calling the boto3.client() function with 'kinesis' as the service name and 'us-west-1' as the region name. This client object provides an interface to interact with Kinesis service in the US West 1 region, such as creating and managing Kinesis streams, putting and getting records from Kinesis streams, and more.
 
 ![image](https://user-images.githubusercontent.com/83365184/226069049-ea77f808-4984-47ae-9c49-c3c2cc79c725.png)
 
