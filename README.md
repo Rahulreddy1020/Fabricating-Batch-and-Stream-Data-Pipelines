@@ -91,16 +91,24 @@ With Boto3, developers can easily build serverless applications using AWS Lambda
 
 ## Kinesis 
 
+we need to create a stream which could collect the data from our CSV file which is in S3 and shard the data based on category id and replicate it into different zones for zero tolerance.
+
+A Kinesis stream is a managed service provided by AWS that allows you to collect and process large streams of data records in real time. The stream is made up of shards, and the partition key determines which shard a data record belongs to. In your case, it seems that the partition key is set to the category_id field, meaning that records with the same category_id will be sent to the same shard for processing.
+
+It's worth noting that when designing a Kinesis stream, it's important to choose an appropriate partition key that evenly distributes data records across shards to ensure optimal performance and scalability. Additionally, you'll need to configure one or more consumers to read data from the stream and process it in real time.
+
 !![image](https://user-images.githubusercontent.com/83365184/226069598-07c0d01c-37d6-495c-a876-be4236271afd.png)
 
 
 ## Python Script
 
+### Importing Libraries
+
 In this step we are importing essential libraries which are required.
 
 ![image](https://user-images.githubusercontent.com/83365184/226068960-6ff395dc-e416-4bcb-817e-2f3f420128f0.png)
 
-creating AWS settings
+### creating AWS settings
 
 1. The first line creates an S3 client object by calling the boto3.client() function with 's3' as the service name and 'us-west-1' as the region name. This client object provides an interface to interact with S3 service in the US West 1 region, such as uploading or downloading files to/from S3 buckets, creating and deleting S3 buckets, and more..
 2. The second line creates an S3 resource object by calling the boto3.resource() function with 's3' as the service name and 'us-west-1' as the region name. This resource object provides a higher-level interface to interact with S3 service in the US West 1 region, such as creating S3 buckets, listing objects in S3 buckets, copying objects from one bucket to another, and more.
@@ -108,6 +116,29 @@ creating AWS settings
 
 ![image](https://user-images.githubusercontent.com/83365184/226069049-ea77f808-4984-47ae-9c49-c3c2cc79c725.png)
 
+### Environmnent Variables 
+
+we have defined a Kinesis stream with the name ecommerce-raw-user-activity-stream-1 and a streaming partition key of category_id
+
+![image](https://user-images.githubusercontent.com/83365184/226070678-43becc06-365b-4952-93e3-25faa6572bd1.png)
+
+### Creating a function to split file to n number of JSON files 
+
+This Python code defines a function called stream_data_simulator that reads a CSV file from an Amazon S3 bucket, converts each row to a JSON object, adds a fake timestamp, writes the JSON object to an Amazon Kinesis stream, and prints some information about the process. The function takes two arguments: input_s3_bucket, which is the name of the S3 bucket containing the CSV file, and input_s3_key, which is the key for the CSV file within the S3 bucket.
+
+The function first reads the CSV file using the S3 resource s3_resource and csv_file.get(), which returns a response object. It then decodes the response body using utf-8 encoding and splits the resulting string into individual lines using the split method.
+
+For each line in the CSV file, the function uses json.dumps and json.loads to convert the row to a JSON object. It then adds a fake timestamp to the JSON object using datetime.now().isoformat(). The function then writes the JSON object to a Kinesis stream using kinesis_client.put_record, which takes three arguments: StreamName, which is the name of the Kinesis stream to write to, Data, which is the JSON object to write, and PartitionKey, which is a string used to determine which shard the data is written to. The function also prints the HTTP status code and the category_code field from the JSON object.
+
+Finally, the function adds a pause of 250 milliseconds using sleep(0.250) to simulate a slow data stream for demonstration purposes.
+
+Note: This code snippet is not complete and it lacks some important information like imports and variable definitions. Additionally, it uses some variables like s3_resource, kinesis_client, kinesis_stream_name, and streaming_partition_key that are not defined within the function.
+
+
+![image](https://user-images.githubusercontent.com/83365184/226071262-2cc1c31c-580d-465f-af15-6db667bf2bdc.png)
+
+
+### 
 
 
 ! 
