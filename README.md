@@ -132,14 +132,14 @@ For each line in the CSV file, the function uses json.dumps and json.loads to co
 
 Finally, the function adds a pause of 250 milliseconds using sleep(0.250) to simulate a slow data stream for demonstration purposes.
 
-Note: This code snippet is not complete and it lacks some important information like imports and variable definitions. Additionally, it uses some variables like s3_resource, kinesis_client, kinesis_stream_name, and streaming_partition_key that are not defined within the function.
 
 
 ![image](https://user-images.githubusercontent.com/83365184/226071262-2cc1c31c-580d-465f-af15-6db667bf2bdc.png)
 
 
-### 
+### Kinesis Stream 1
 
+Now the data is consumed by the kinesis stream 1 and partioned based on category id, this is considered as a raw data and we can use Glue crawler.The crawler can then use this metadata to create a data catalog, which can be used to keep track of the data and make it available for analysis.
 
 ! 
 
