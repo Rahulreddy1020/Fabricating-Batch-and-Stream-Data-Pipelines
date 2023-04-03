@@ -6,11 +6,8 @@ Our eCommerce company has received requests from the marketing team and Datascie
 
 -Marketing team wants to analyze user shopping journey in real-time.
 -Data Science team wants to detect anomalies on the website in real-time.
--The pipeline must involve ingesting, processing, and visualizing data simultaneously.
--The pipeline must be capable of detecting anomalies or intrusions on the eCommerce website.
--The Cybersecurity team should be notified in case of potential security breaches.
--The pipeline will be deployed to a production environment.
--Regular monitoring and maintenance are required.
+-The pipeline must involve ingesting, processing, and visualizing data simultaneously & must be capable of detecting anomalies or intrusions on website.
+-The pipeline will be deployed to a production environment where Regular monitoring and maintenance are required.
 
 ## Goals
 
