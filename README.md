@@ -1,7 +1,13 @@
 # Fabricating-Batch-and-Stream-Data-Pipelines
 
+## Problem Statement
+
+Build a Real-time data pipeline which involves ingesting, processing,  and visualizing data at same time detecting the anomalies or intrusion on the eCommerce website or application
+
+G
 ## Business Overview :
-Ecommerce analytics is the process which involves gathering data from various sources to analyze customer behavior and shopping patterns across the entire customer journey. In this project, an eCommerce dataset will be used to create two analytical pipelines: Batch and Real-time. The Batch processing involves ingesting, processing, and visualizing data using various Amazon services to draw insights such as 
+Ecommerce analytics is the process which involves gathering data from various sources to analyze customer behavior and shopping patterns across the entire customer journey. In this project, an eCommerce dataset will be used to create two analytical pipelines using various Amazon services to draw insights such as 
+
 - unique visitors per day 
 - identifying when users add products to carts but don't buy 
 - top categories per hour/weekday for promotions, and identifying brands that need more marketing. 
