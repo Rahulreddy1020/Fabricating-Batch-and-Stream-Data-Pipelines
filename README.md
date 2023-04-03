@@ -2,7 +2,15 @@
 
 ## Problem Statement
 
-Build a Real-time data pipeline which involves ingesting, processing,  and visualizing data at same time detecting the anomalies or intrusion on the eCommerce website or application
+Our eCommerce company has received requests from the marketing team and Datascience team to build a real-time data pipeline that can analyze the shopping journey and behavior of users as well as detect any anomalies or intrusions on the website.
+
+-Marketing team wants to analyze user shopping journey in real-time.
+-Data Science team wants to detect anomalies on the website in real-time.
+-The pipeline must involve ingesting, processing, and visualizing data simultaneously.
+-The pipeline must be capable of detecting anomalies or intrusions on the eCommerce website.
+-The Cybersecurity team should be notified in case of potential security breaches.
+-The pipeline will be deployed to a production environment.
+-Regular monitoring and maintenance are required.
 
 ## Goals
 
