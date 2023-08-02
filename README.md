@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Our eCommerce company has received requests from the marketing team and Datascience team to build a real-time data pipeline that can analyze the shopping journey and behavior of users as well as detect any anomalies or intrusions on the website.
+An eCommerce company has received requests from the marketing team and Datascience team to build a real-time data pipeline that can analyze the shopping journey and behavior of users as well as detect any anomalies or intrusions on the website.
 
 -Marketing team wants to analyze user shopping journey in real-time.
 -Data Science team wants to detect anomalies on the website in real-time.
